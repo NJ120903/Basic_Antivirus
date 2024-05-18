@@ -1,7 +1,12 @@
 import os
 import hashlib
 
-db = ['']
+#if you want to use your own database
+#db = ['']
+
+#if File is provided
+with open('bases.cav', 'r') as file:
+    db = [line.strip() for line in file]
 
 def check(signature, efile):
     print(f"  {signature}  ")
